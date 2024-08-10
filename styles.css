@@ -348,6 +348,7 @@ footer h2 {
     #bc1888 100%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   background-color: text;
   -webkit-text-fill-color: transparent;
 }
@@ -546,6 +547,7 @@ footer h2 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 5;
+    line-clamp: 5;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
   }
