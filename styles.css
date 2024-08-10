@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ruslan+Display&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --font-logo: "Ruslan Display", sans-serif;
+  --font-overpass: "Overpass", sans-serif;
+  --font-ubuntu: "Ubuntu", sans-serif;
+  --primary-red: #f1684a;
+  --mainfont-color: #30353b;
+  --font-color: #979ba2;
+}
+
+/* ----------------------------------------------------------------------
+                                  GLOBAL STYLING 
+-------------------------------------------------------------------------*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 0.8rem;
+  color: var(--font-color);
+  line-height: 1.2rem;
+}
+
+.btn {
+  background-color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+  padding: 0.7rem 1rem;
+  color: white;
+  font-family: var(--font-ubuntu);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 800;
+}
+
+.btn:hover {
+  background-color: white;
+  color: var(--primary-red);
+}
+/* ----------------------------------------------------------------------
+                                  HEADER STYLING START
+-------------------------------------------------------------------------*/
+header {
+  width: 100%;
+  /* height: calc(100vh - 0px); */
+  padding: 2rem 0 0 3rem;
+  position: relative;
+}
+
+.top-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.top-part h2 {
+  font-family: var(--font-logo);
+  color: var(--primary-red);
+}
+
+.nav-links-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: var(--font-ubuntu);
+  font-weight: 600;
+}
+
+.nav-links {
+  position: relative;
+  cursor: pointer;
+  color: white;
+}
+
+.blk {
+  color: black;
+}
+
+.nav-links::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: 80%;
+  left: 0;
+  opacity: -1;
+  transition: all 0.5s;
+}
+.blk::after {
+  background-color: black;
+}
+.nav-links:hover:after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.menu-container #menu-open,
+.menu-container #menu-close {
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  color: white;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+#menu-open {
+  transform: translate(-0%, -120%);
+  opacity: -1;
+}
+
+#menu-close {
+  transform: translate(-140%, -120%);
+  opacity: -1;
+}
+
+.hero-content-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: var(--font-overpass);
+}
+
+.hero-content-container img {
+  max-width: 55%;
+  width: 100%;
+  height: 102vh;
+  object-fit: cover;
+  margin-top: -9%;
+}
+
+.hero-content-container h1 {
+  font-size: 2.3rem;
+  color: var(--mainfont-color);
+}
+
+.hero-content-container .hero-content {
+  width: 80%;
+  margin: 1.5rem 0;
+}
+
+/* ----------------------------------------------------------------------
+                                  HEADER STYLING END
+-------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------
+                                  MAIN STYLING START
+-------------------------------------------------------------------------*/
+main {
+  width: 100%;
+}
+/* -------------------------- Section 1 Styling START------------------------- */
+
+.section-1 {
+  width: 100%;
+  padding: 0rem 3rem 0 0;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-family: var(--font-overpass);
+}
+
+.section-1 img {
+  max-width: 49%;
+  width: 100%;
+  object-fit: cover;
+  height: 80vh;
+}
+.content h2 {
+  color: var(--mainfont-color);
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+}
+
+.content a {
+  font-weight: 900;
+  color: var(--mainfont-color);
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.content i {
+  margin-left: 0.5rem;
+  color: var(--primary-red);
+  transition: all 0.3s;
+}
+
+.content a:hover i,
+.content a:hover {
+  color: var(--font-color);
+}
+/* -------------------------- Section 1 Styling END------------------------- */
+
+/* -------------------------- Section 2 Styling START------------------------- */
+.section-2 {
+  width: 100%;
+  padding: 2rem;
+  font-family: var(--font-overpass);
+  text-align: center;
+}
+
+.section-2 h2 {
+  margin-bottom: 2rem;
+  color: var(--mainfont-color);
+  font-weight: 900;
+}
+.card-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.card {
+  width: 30%;
+}
+
+.card-container .card img {
+  max-width: 100%;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-container .card h3 {
+  color: var(--mainfont-color);
+  margin: 1rem 0;
+}
+
+.card-container .card p {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* -------------------------- Section 2 Styling END ------------------------- */
+
+/* -------------------------- Section 3 Styling START ------------------------- */
+.section-3 {
+  width: 100%;
+  font-family: var(--font-overpass);
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.container .card {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.container .card h3 {
+  margin-bottom: 1rem;
+  color: var(--mainfont-color);
+}
+.container .card img {
+  max-width: 300px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* -------------------------- Section 3 Styling END------------------------- */
+
+/* ----------------------------------------------------------------------
+                                  MAIN STYLING END
+-------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------
+                                  FOOTER STYLING START
+-------------------------------------------------------------------------*/
+footer {
+  width: 100%;
+  background-color: var(--mainfont-color);
+  color: white;
+  font-family: var(--font-ubuntu);
+  text-align: center;
+  padding: 3rem 1rem 0.5rem 1rem;
+}
+
+footer h2 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: var(--primary-red);
+  margin-bottom: 2rem;
+}
+
+.social-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.social-icon-container i {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.social-icon-container .social-icon-1:hover {
+  transform: scale(1.2);
+  color: #1877f2;
+}
+.social-icon-container .social-icon-2:hover {
+  transform: scale(1.2);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text;
+  background-color: text;
+  -webkit-text-fill-color: transparent;
+}
+.social-icon-container .social-icon-3:hover {
+  transform: scale(1.2);
+  color: #1da1f2;
+}
+.social-icon-container .social-icon-4:hover {
+  transform: scale(1.2);
+  color: #111111;
+
+  filter: drop-shadow(2px 0px 0px #fd3e3e) drop-shadow(-2px -2px 0px #4de8f4);
+}
+
+.contact-detail p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-detail p i,
+.contact-detail p span {
+  color: var(--primary-red);
+  font-size: 0.9rem;
+}
+
+.copyright {
+  text-align: right;
+}
+/* ----------------------------------------------------------------------
+                                  FOOTER STYLING END
+-------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------
+                                  MEDIA QUERY  START
+-------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1070px) {
+  .hero-content-container h1 {
+    font-size: 2rem;
+  }
+  .hero-content-container .hero-content {
+    width: 90%;
+  }
+  .hero-content-container img {
+    margin-top: -10%;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .nav-links-container {
+    margin-left: 2rem;
+  }
+  .hero-content-container img {
+    margin-top: -15%;
+  }
+  /* -------------------- Section 1 -------------------- */
+  .section-1 img {
+    max-width: 51%;
+  }
+  /* -------------------- Section 3 -------------------- */
+  .container .card {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* -------------------- HEADER START -------------------- */
+  header {
+    padding: 2rem 0;
+    height: 100vh;
+  }
+
+  .top-part h2 {
+    margin-left: 2rem;
+    text-shadow: 2px 2px #070707;
+  }
+  nav {
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: -100%;
+    background-color: #30353bef;
+    padding: 4rem 0;
+    border-radius: 12px;
+    transition: all 0.5s;
+  }
+
+  .top-part.active nav {
+    left: 8%;
+  }
+  .nav-links-container {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+  }
+  .nav-links {
+    font-size: 1.5rem;
+  }
+
+  .blk {
+    color: white;
+  }
+
+  .blk::after {
+    background-color: white;
+  }
+  .menu-container #menu-open,
+  .menu-container #menu-close {
+    margin-right: 0.5rem;
+  }
+  #menu-open {
+    transform: translate(-0%, -0%);
+    opacity: 1;
+  }
+  .top-part.active #menu-open {
+    transform: translate(-0%, -120%);
+    opacity: -1;
+  }
+  .top-part.active #menu-close {
+    transform: translate(-130%, -0%);
+    opacity: 1;
+    font-size: 2rem;
+  }
+
+  .hero-content-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-content-container img {
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+    filter: brightness(50%);
+    height: 60vh;
+  }
+
+  .hero-content-div {
+    padding: 1rem 2rem;
+  }
+  .hero-content-div .hero-content {
+    width: 100%;
+  }
+  /* -------------------- HEADER END -------------------- */
+
+  /* -------------------- MAIN START -------------------- */
+
+  /* -------------------- SECTION - 1 -------------------- */
+
+  .section-1 {
+    flex-direction: column;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 3rem;
+    gap: 1.5rem;
+    height: calc(100vh - 0px);
+  }
+
+  .section-1 img {
+    max-width: 100%;
+    height: 60vh;
+  }
+
+  .section-1 .content {
+    padding: 1rem 2rem;
+  }
+  /* -------------------- SECTION - 1 -------------------- */
+
+  /* -------------------- SECTION - 2 -------------------- */
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card img {
+    height: 300px;
+  }
+  /* -------------------- SECTION - 2 -------------------- */
+
+  /* -------------------- SECTION - 3 -------------------- */
+  .container .card {
+    width: 80%;
+  }
+  /* -------------------- SECTION - 3 -------------------- */
+
+  /* -------------------- MAIN END -------------------- */
+}
+
+@media only screen and (max-width: 615px) {
+  .hero-content-container img {
+    margin-top: -20%;
+  }
+  .container .content p {
+    height: 100px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  .hero-content-container img {
+    margin-top: -40%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  p {
+    font-size: 0.7rem;
+  }
+  .hero-content-container h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content-div {
+    padding: 1rem;
+  }
+  .hero-content-div .hero-content {
+    font-size: 0.7rem;
+  }
+  footer h2 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 305px) {
+  .top-part h2 {
+    font-size: 1.2rem;
+  }
+  .hero-content-container img {
+    margin-top: -45%;
+  }
+}
+
+@media (orientation: landscape) {
+  header {
+    height: auto;
+    padding-top: 0;
+    padding-left: 1.4rem;
+  }
+  .hero-content-container h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content-container .hero-content {
+    width: 100%;
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+  }
+  .section-1 {
+    height: auto;
+  }
+  .container {
+    height: auto;
+  }
+}
+
+/* ----------------------------------------------------------------------
+                                  MEDIA QUERY END
+-------------------------------------------------------------------------*/
