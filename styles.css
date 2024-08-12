@@ -559,6 +559,25 @@ footer h2 {
   .hero-content-container img {
     margin-top: -40%;
   }
+  /* ------------------------- */
+  header {
+    height: auto;
+    padding-top: 0;
+  }
+  .hero-content-container h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content-container .hero-content {
+    width: 100%;
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+  }
+  .section-1 {
+    height: auto;
+  }
+  .container {
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -587,11 +606,10 @@ footer h2 {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 960px) {
   header {
     height: auto;
     padding-top: 0;
-    padding-left: 1.4rem;
   }
   .hero-content-container h1 {
     font-size: 1.5rem;
